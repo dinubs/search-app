@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1= title
+  form(action='/' method='get')  
+    input(
+      type='text'
+      name='search'
+      placeholder='Search'
+      value='#{search}'
+    )
+    input(
+      type='submit'
+      value='Search'
+    )
+  each result in results
+    a(href=result.clickurl)
+      |  !{result.title}
+    p!= result.abstract
+    br
+  if page && page > 1
+    a(
+      href='/?search=#{search}&page=#{page - 1}'
+    )
+      | Previous
+    span 
+      |  
+    span
+      | | 
+  if page && search  
+    a(
+      href='/?search=#{search}&page=#{page + 1}'
+    )
+      | Next
