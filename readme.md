@@ -1,4 +1,6 @@
-### Hello, this is a simple web search I built using node.js and express, and jade
+### Simple Web Search 
 
-To run the server, just do node bin/www
+I built this using node.js and express, jade, and the Yahoo! Boss Search Engine.
+
+To run the server, just do `node bin/www`
 
